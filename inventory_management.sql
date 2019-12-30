@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 30, 2019 at 04:30 AM
+-- Generation Time: Dec 30, 2019 at 04:46 AM
 -- Server version: 5.7.19
 -- PHP Version: 7.0.23
 
@@ -115,10 +115,10 @@ CREATE TABLE IF NOT EXISTS `inventory_order` (
 --
 
 INSERT INTO `inventory_order` (`inventoryOrderID`, `userID`, `inventoryOrderTotal`, `inventoryOrderDate`, `inventoryOrderName`, `inventoryOrderAddress`, `paymentStatus`, `inventoryOrderStatus`, `inventoryOrderCreatedDate`) VALUES
-(2, 6002, 330000, '02-12-2019', 'Indomaret Asrama', 'Jalan Asrama Medan Helvetia', 'cash', 'active', 1575550462),
-(3, 6003, 2200000, '03-12-2019', 'PT Nusa Net', 'Jalan Multatuli Medan Baru', 'cash', 'active', 1575550549),
+(2, 6001, 330000, '02-12-2019', 'Indomaret Asrama', 'Jalan Asrama Medan Helvetia', 'cash', 'active', 1575550462),
+(3, 6004, 2200000, '03-12-2019', 'PT Nusa Net', 'Jalan Multatuli Medan Baru', 'cash', 'active', 1575550549),
 (4, 6004, 220000000, '27-12-2019', 'Test123', 'Bangalore', 'cash', 'active', 1577455575),
-(5, 4, 1650000, '21-12-2019', 'Test', 'Bangalore', 'cash', 'active', 1577510905);
+(5, 6001, 1650000, '21-12-2019', 'Test', 'Bangalore', 'cash', 'active', 1577510905);
 
 -- --------------------------------------------------------
 
@@ -169,7 +169,7 @@ CREATE TABLE IF NOT EXISTS `product` (
   `productStatus` enum('pending','approved') NOT NULL,
   `productDate` date NOT NULL,
   PRIMARY KEY (`productID`)
-) ENGINE=InnoDB AUTO_INCREMENT=1914 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1915 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `product`
@@ -179,7 +179,8 @@ INSERT INTO `product` (`productID`, `categoryID`, `brandID`, `productName`, `pro
 (1907, 10011, 7013, 'LCD Matrix Polytron', 'Lightening and save energy LCD for advertising', -89, 'Unit', 2000000, 200000, 0, 6001, 'pending', '2019-12-05'),
 (1908, 10012, 7016, 'Collage Cartoon White Papers 10 inch', 'Cartoon papers for advertising or brocures', 3, 'Unit', 150000, 15000, 0, 6001, 'approved', '2019-12-05'),
 (1912, 10011, 7014, 'Sony', 'test ', 10, 'Unit', 10, 10, 0, 6001, 'pending', '2019-12-28'),
-(1913, 10012, 7016, 'Test final', 'This is final test test', 10, 'Unit', 100, 1000, 0, 6005, 'pending', '2019-12-30');
+(1913, 10012, 7016, 'Test final', 'This is final test test', 10, 'Unit', 100, 1000, 0, 6005, 'approved', '2019-12-30'),
+(1914, 10011, 7014, 'ikiji', 'ABIBHVDC UBBAISCIibdcb ', 10, 'Unit', 10, 10, 0, 6001, 'pending', '2019-12-30');
 
 -- --------------------------------------------------------
 
