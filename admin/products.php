@@ -201,7 +201,7 @@
 						"target":[7,8,9]
 					}
 				],
-				"pageLength" : 10,
+				"pageLength" : 11,
 				"columns":[
 					{"name" : "productID", "orderable":true},
 					{"name" : "productName", "orderable":true},
@@ -213,7 +213,10 @@
 					{"name" : "Edit", "orderable":false},
 					{"name" : "View", "orderable":false},
 					{"name" : "Delete", "orderable":false},
-					{"name" : "Approve", "orderable":false}
+					<?php
+					if($_SESSION['role']!='assistant')
+					echo '{"name" : "Approve", "orderable":false}';
+					?>
 				]
 			});
 				let hasSelectChange = false;
@@ -308,10 +311,10 @@
 					productDescriptionTag = '<td>'+productViewDescription+'</td>'
 				}
 				if(productViewStatus=='pending'){
-					statusTag = '<td class="text-success" >Pending</td>'
+					statusTag = '<td class="text-danger" >Pending</td>'
 				}else
 				{
-					statusTag = '<td class="text-danger" >Approved</td>'
+					statusTag = '<td class="text-success" >Approved</td>'
 				}
 				$('#viewProductModal .modal-body').html(`
 													<table class="table table-striped">

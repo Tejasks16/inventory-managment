@@ -53,11 +53,11 @@
 		$status = '';
 		if($row['productStatus']=='pending')
 		{
-			$status = '<p class="text-success">Pending</p>';
+			$status = '<p class="text-danger">Pending</p>';
 		}
 		else
 		{
-			$status = '<p class="text-danger">Approved</p>';
+			$status = '<p class="text-success">Approved</p>';
 		}
 		$sub_array = [];
 		$sub_array[] = $row['productID'];
